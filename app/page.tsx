@@ -83,7 +83,7 @@ export default function Home() {
       tType = "T5";
     }
     if (taxCopyChecked) {
-      taxCopy = ` • One copy of the ${tType} 2023 Summary & Slips to sign (Tax Copy),\n`;
+      taxCopy = ` • One copy of the ${tType} 2023 Summary & Slips to sign (Tax Copy), and\n`;
     }
     setText(
       `Dear ${clientName}, \n\n We enclose the following:\n\n • One copy of the ${tType} 2023 Summary & Slips (Client’s Copy) for your file, \n${taxCopy} • Invoice for services performed.\n\nThe tax copy will be efiled with the Canada Revenue Agency accordingly before February 29, 2024.\n\nWe have retained a copy of the T5 2023 slip for you for the preparation of your personal income tax return. `
