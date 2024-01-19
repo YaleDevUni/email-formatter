@@ -54,7 +54,7 @@ export default function Home() {
   };
   useEffect(() => {
     handleSetTitle();
-  }, [t4checked, t5checked, t4t5checked]);
+  }, [t4checked, t5checked, t4t5checked, clientCorpName, clientName]);
   const handleClientName = (e: ChangeEvent<HTMLInputElement>) => {
     setClientName(e.target.value);
     handleSetTitle();
