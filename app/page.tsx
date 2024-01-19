@@ -46,7 +46,7 @@ export default function Home() {
     } else if (t5checked) {
       s = " - E-Package for T5 2023, & Invoice";
     } else if (t4t5checked) {
-      s = "E-Package for T4 2023, T5 2023, & Invoice";
+      s = " - E-Package for T4 2023, T5 2023, & Invoice";
     }
     const clientOrCorpName = clientCorpName ? clientCorpName : clientName;
     s = clientOrCorpName + " " + s;
@@ -77,6 +77,10 @@ export default function Home() {
   const formatText = () => {
     let tType = "";
     let taxCopy = "";
+    let taxCopyAlpha = "";
+    let taxCopyBeta = "";
+    let taxCopyOmega = ".";
+    let s = "";
     if (t4checked) {
       tType = "T4";
     } else if (t5checked) {
@@ -84,10 +88,15 @@ export default function Home() {
     }
     if (taxCopyChecked) {
       taxCopy = ` • One copy of the ${tType} 2022 Summary & Slips to sign (Tax Copy),\n`;
+      taxCopyAlpha = `     • One copy of the T4 2022 Summary & Slips to sign (Tax Copy),\n`;
+      taxCopyBeta = `     • One copy of the T5 2022 Summary & Slips to sign (Tax Copy),\n`;
+      taxCopyOmega = `, and\n     • One copy of the T5 2022 Summary & Slips to sign (Tax Copy).`;
     }
-    setText(
-      `Dear ${clientName}, \n\n We enclose the following:\n\n • One copy of the ${tType} 2022 Summary & Slips (Client’s Copy) for your file, \n${taxCopy} • Invoice for services performed.\n\nThe tax copy will be efiled with the Canada Revenue Agency accordingly before February 29, 2024.\n\nWe have retained a copy of the T5 2023 slip for you for the preparation of your personal income tax return. `
-    );
+    s = `Dear ${clientName}, \n\n We enclose the following:\n\n • One copy of the ${tType} 2022 Summary & Slips (Client’s Copy) for your file, \n${taxCopy} • Invoice for services performed.\n\nThe tax copy will be efiled with the Canada Revenue Agency accordingly before February 29, 2024.\n\nWe have retained a copy of the T5 2023 slip for you for the preparation of your personal income tax return. `;
+    if (t4t5checked) {
+      s = `Dear ${clientName}, \n\n We enclose the following:\n\nT4 2022\n\n     • One copy of the T4 2022 Summary & Slips (Client’s Copy) for your file, \n${taxCopyAlpha}     • Invoice for services performed.\n\nPlease sign the Tax Copy where indicated and email/fax back to us so we can efile to Canada Revenue Agency before February 28, 2023.\n\nPlease forward the attached T4 2022 Slips to the employees before February 28, 2023.\n\nThe T4 2022 Slips will need to be distributed to the recipients directly by you before February 28, 2023.\n\nWe have retained a copy of the T4 2022 slip for George for the preparation of his personal income tax return.\n\nT5 2022\n\n     • One copy of the T5 2022 Summary & Slips (Client's Copy) for your file${taxCopyOmega}\n\nPlease sign the Tax Copy where indicated and email/fax back to us so we can efile to Canada Revenue Agency before February 28, 2023.\n\nWe have retained a copy of the T5 2023 slip for you for the preparation of your personal income tax return. `;
+    }
+    setText(s);
   };
   const formatTitle = () => {
     setText("");
