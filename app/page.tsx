@@ -42,11 +42,11 @@ export default function Home() {
   const handleSetTitle = () => {
     let s = "";
     if (t4checked) {
-      s = " - E-Package for T4 2023 & Invoice";
+      s = " - E-Package for T4 2023, & Invoice";
     } else if (t5checked) {
       s = " - E-Package for T5 2023, & Invoice";
     } else if (t4t5checked) {
-      s = "E-Package for T4 2023, T5 2023, & Invoice";
+      s = " - E-Package for T4 2023, T5 2023, & Invoice";
     }
     const clientOrCorpName = clientCorpName ? clientCorpName : clientName;
     s = clientOrCorpName + " " + s;
@@ -86,7 +86,7 @@ export default function Home() {
       taxCopy = ` • One copy of the ${tType} 2023 Summary & Slips to sign (Tax Copy), and\n`;
     }
     setText(
-      `Dear ${clientName}, \n\n We enclose the following:\n\n • One copy of the ${tType} 2023 Summary & Slips (Client’s Copy) for your file, \n${taxCopy} • Invoice for services performed.\n\nThe tax copy will be efiled with the Canada Revenue Agency accordingly before February 29, 2024.\n\nWe have retained a copy of the T5 2023 slip for you for the preparation of your personal income tax return. `
+      `Dear ${clientName}, \n\n We enclose the following:\n\n • One copy of the ${tType} 2023 Summary & Slips (Client’s Copy) for your file, and \n${taxCopy} • Invoice for services performed.\n\nThe tax copy will be efiled with the Canada Revenue Agency accordingly before February 29, 2024.\n\nWe have retained a copy of the T5 2023 slip for you for the preparation of your personal income tax return. `
     );
   };
   const formatTitle = () => {
