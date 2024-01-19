@@ -42,7 +42,7 @@ export default function Home() {
   const handleSetTitle = () => {
     let s = "";
     if (t4checked) {
-      s = " - E-Package for T4 2023 & Invoice";
+      s = " - E-Package for T4 2023, & Invoice";
     } else if (t5checked) {
       s = " - E-Package for T5 2023, & Invoice";
     } else if (t4t5checked) {
