@@ -102,7 +102,7 @@ export default function Home() {
   return (
     <div className="flex">
       <div>
-        <h1>Email formatter for client. Designed By Josh Kim</h1>
+        <h1>Email formatter for client. Designed By Josh Kim...</h1>
         <div className="flex">
           <div>Client Corporation Name:</div>
           <input
