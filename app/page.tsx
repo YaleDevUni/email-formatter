@@ -42,11 +42,11 @@ export default function Home() {
   const handleSetTitle = () => {
     let s = "";
     if (t4checked) {
-      s = "Corporation. - E-Package for T4 2023 & Invoice T4";
+      s = " - E-Package for T4 2023 & Invoice";
     } else if (t5checked) {
-      s = "Corporation. - E-Package for T5 2023, & Invoice T5";
+      s = " - E-Package for T5 2023, & Invoice";
     } else if (t4t5checked) {
-      s = "E-Package for T4 2023, T5 2023, & Invoice Both";
+      s = "E-Package for T4 2023, T5 2023, & Invoice";
     }
     const clientOrCorpName = clientCorpName ? clientCorpName : clientName;
     s = clientOrCorpName + " " + s;
